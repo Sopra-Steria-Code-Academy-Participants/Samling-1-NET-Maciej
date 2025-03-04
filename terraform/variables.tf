@@ -1,12 +1,12 @@
 variable "environment" {
   type        = string
   description = "Name of the application environment"
-  default     = "test-maciej"
+  default     = "test"
 }
 variable "rg_name" {
   type        = string
   description = "The resource group name"
-  default     = "rc-codeacademy-example-mAcIeJ"
+  default     = "rc-codeacademy-example"
 }
 
 variable "rg_location" {
