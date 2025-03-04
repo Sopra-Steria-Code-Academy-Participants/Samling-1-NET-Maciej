@@ -45,5 +45,7 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"Samling1NETMaciej" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
+          dotnet restore .\CodeAcademy\CodeAcademy.sln
           dotnet build .\CodeAcademy\CodeAcademy.sln
+          dotnet test .\CodeAcademy\CodeAcademy.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
